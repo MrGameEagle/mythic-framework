@@ -5,6 +5,9 @@ function RetrieveComponents()
     Utils = exports['mythic-base']:FetchComponent('Utils')
     Notification = exports['mythic-base']:FetchComponent('Notification')
     Jobs = exports['mythic-base']:FetchComponent('Jobs')
+    Polyzone = exports['mythic-base']:FetchComponent('Polyzone')
+    Inventory = exports['mythic-base']:FetchComponent('Inventory')
+    Sounds = exports["mythic-base"]:FetchComponent("Sounds")
 end
 
 AddEventHandler('Core:Shared:Ready', function()
@@ -14,6 +17,9 @@ AddEventHandler('Core:Shared:Ready', function()
         'Utils',
         'Notification',
         'Jobs',
+        'Polyzone',
+        'Inventory',
+        'Sounds'
     }, function(error)
         if #error > 0 then return; end
         RetrieveComponents()
